@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Sign In | Moneyvarsity- Admin &amp; Dashboard </title>
+    <title>Sign In | Moneyvarsity-  Dashboard </title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
