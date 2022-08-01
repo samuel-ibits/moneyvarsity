@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Referrals | Front - Admin &amp; Dashboard Template</title>
+    <title>Referrals | Moneyvarsity Dashboard Template</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
