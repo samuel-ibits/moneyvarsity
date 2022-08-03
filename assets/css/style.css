@@ -657,6 +657,10 @@ input::-ms-input-placeholder {
 .home .main_home h1{
     color: #fff;
     margin-bottom:20px;
+
+    font-size: 3rem;
+    line-height: 3rem;
+}
 }
 .home .main_home p{
     color: #fff;
