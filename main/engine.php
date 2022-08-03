@@ -76,13 +76,20 @@ if(isset($_POST['signup'])) {
     
    $pas=$_POST['password'];
    $repass=$_POST['confirmpassword'];
-   if ($pas==$repass AND $err==""){$pass=$_POST['pass'];	$err2="";
+   if ($pas==$repass AND $err==""){$pass=$_POST['password'];	$err2="";}
     
    $pockid='pocket'.rand();
    $userid='user'.rand();
    $tokenid= 'a'.$phone.$pass;
     $date= date("Y-m-d h:i:sa");
    
+    $upline=$_POST['upline'];;
+    $downline=rand(10000, 99999);
+
+    
+$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$email', '$pass', '$upline', '$downline', '0', '0')";
+
+if ($conn->query($in) === TRUE) { echo'true';}
 //    $ins="INSERT INTO users (id, fname, lname, uname, password, phone, userid, email) VALUES ('$tokenid', '$fname', '$lname', '$uname', '$pass', '$phone', '$userid', '$email')";
     
 //    }else{
@@ -91,8 +98,8 @@ if(isset($_POST['signup'])) {
 //        $sqdd="INSERT INTO profile (Id, ppic, name, username, phone, sta, date, mcred, course, school, email, descyour, year, pocketid, howsch, descou, dessch, dob, bescou, besstudtm, rescrush, irep, enjdoing, favfood, ihate, icherish) VALUES ('$userid', 'media/', '$fname', '$uname', '$phone', '1', '$date', '5', '', '', '$email', '' , '', '', '', '', '', '', '', '', '', '', '', '', '', '')";
 //    if ($conn6->query($sqdd)===TRUE) {}else{}
    
-   $sqdl="CREATE TABLE account (id VARCHAR(30) NOT NULL PRIMARY KEY, fulname TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL,  TEXT NOT NULL)";
-   if ($conn->query($sqdl)===TRUE) {}else{}
+  //  $sqdl="CREATE TABLE account (id VARCHAR(30) NOT NULL PRIMARY KEY, fulname TEXT NOT NULL, email TEXT NOT NULL, password TEXT NOT NULL,  TEXT NOT NULL)";
+  //  if ($conn->query($sqdl)===TRUE) {}else{}
    
 //        echo "New Account Created";
 //    $ale1 = "Account created success";
@@ -130,8 +137,7 @@ if(isset($_POST['signup'])) {
 //    }
 
 }
-}else{$err="";$err2="";$prof="none";$regdis="block";$userid="";$fulname="";$uname="";$phone="";$pockid="";}
-   
+ 
    
 
 ?>
