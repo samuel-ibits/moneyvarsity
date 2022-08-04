@@ -639,7 +639,7 @@
             <h1>Hello, nice to see you!</h1>
             <p>You have been invited to join Moneyvarsity Network. Enjoy!</p>
 
-            <a class="btn btn-primary" href="authentication-signup-basic.php?id=<?php echo $_GET["id"] ; ?>">Accept Invite</a>
+            <a class="btn btn-primary" href="signup.php?id=<?php echo $_GET["id"] ; ?>">Accept Invite</a>
           </div>
         </div>
         <!-- End Row -->
