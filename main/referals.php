@@ -3614,13 +3614,13 @@ If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
 
 $refdownline=$row["downline"];
-$selrr="SELECT * FROM accounts WHERE upline='".$downline."'";
+$selrr="SELECT * FROM accounts WHERE upline='".$refdownline."'";
 $resultt= $conn->query($selrr);
 If ($resultt->num_rows>0){  
 While ($roww=$resultt->fetch_assoc()){
 
   $numberofsublets=$resultt->num_rows;
-}}
+
 
 echo'
               <tbody>
@@ -3643,6 +3643,7 @@ echo'
                 </tr>
 ';
 
+}}
 }}
 ?>
                 <tr>
