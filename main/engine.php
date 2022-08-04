@@ -78,9 +78,7 @@ if(isset($_POST['signup'])) {
    $lname=$_POST['lname'];
    $fulname=$fname." ". $lname;
     
-   echo $pas=$_POST['password'];
-   echo $repass=$_POST['confirmpassword'];
-   if ($pas==$repass ){$pass=$_POST['password'];}
+   echo $pas=$_POST['pass'];
     
    $pockid='pocket'.rand();
    $userid='user'.rand();
@@ -91,7 +89,7 @@ if(isset($_POST['signup'])) {
     $downline=rand(10000, 99999);
 
     
-$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$fulname', '$email', '$pass', '$upline', '$downline', '0', '0')";
+$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$fulname', '$email', '$pas', '$upline', '$downline', '0', '0')";
 
 if ($conn->query($in) === TRUE) { echo'true';}else{echo $conn->error;}
 
