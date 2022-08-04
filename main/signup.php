@@ -65,7 +65,7 @@
 
                     <span class="divider text-muted mb-4">OR</span>
                   </div>
-                                <label class="input-label" for="fullNameSrEmail">Full name</label>
+                  <label class="input-label" for="fullNameSrEmail">Full name</label>
 
                   <!-- Form Group -->
                   <div class="form-row">
@@ -74,7 +74,7 @@
                         <input type="text" class="form-control form-control-lg" name="fname" id="fullNameSrEmail" placeholder="Mark" aria-label="Mark" required data-msg="Please enter your first name.">
                       </div>
                     </div>
-          <input type="text"  name="upline" value="<?php echo $_GET['id']; ?>" style="display:none;" />
+          <input type="text"  name="upline" value="<?php $_GET['id']; ?>" style="display:none;" />
                     
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
