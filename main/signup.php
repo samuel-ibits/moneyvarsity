@@ -74,7 +74,7 @@
                         <input type="text" class="form-control form-control-lg" name="fname" id="fullNameSrEmail" placeholder="Mark" aria-label="Mark" required data-msg="Please enter your first name.">
                       </div>
                     </div>
-          <input type="text"  name="upline" value="<?php $_GET['id']; ?>"  />
+          <input type="text"  name="upline" value="<?php echo 'v'.$_GET['id']; ?>"  />
                     
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
