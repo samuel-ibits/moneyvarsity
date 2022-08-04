@@ -11,7 +11,7 @@ if(isset($_POST['login'])) {
 $p=$_POST['pass'];
 
 
-echo $toid='a'.$u.$p;
+$toid='a'.$u.$p;
  
     
     	$selr="SELECT * FROM accounts WHERE id='".$toid."'";

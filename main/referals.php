@@ -1,7 +1,7 @@
-<php 
+<?php 
 $token=$_GET['tknopqii'];
 
-$selr="SELECT * FROM accounts WHERE id='".$token."'";
+$selr="SELECT * FROM accounts WHERE token='".$token."'";
 $result= $conn->query($selr);
 If ($result->num_rows>0){  
 While ($row=$result->fetch_assoc()){
