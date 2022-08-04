@@ -1,3 +1,7 @@
+<php 
+echo $_GET['tknopqii'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   

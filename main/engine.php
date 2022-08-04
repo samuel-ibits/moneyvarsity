@@ -11,56 +11,25 @@ if(isset($_POST['login'])) {
 $p=$_POST['password'];
 
 
-
+$toid='a'.$u.$p;
  
     
-    	$selr="SELECT * FROM users WHERE phone like '%{$u}%'";
+    	$selr="SELECT * FROM accounts WHERE id='".$toid."'";
 $result= $conn->query($selr);
 If ($result->num_rows>0){  
 While ($row=$result->fetch_assoc()){
+	$token=$row["token"];
 	
-	
-	$t= $row["phone"];
+  echo "<script type='text/javascript'>alert('Logged in successfully');</script>";
 
-	
+  header("Location: referals.php?tknopqii=".$token);
+
 }}else{
-    $selr="SELECT * FROM users WHERE uname like '%{$u}%'";
-$result= $conn->query($selr);
-If ($result->num_rows>0){  
-While ($row=$result->fetch_assoc()){
-	
-	
-	$t= $row["phone"];
-
-	
-}}
     
-}
-$toid='a'.$t.$p;
-
-
-$sel= "SELECT * FROM users WHERE id='".$toid."'";
-$result= $conn->query($sel);
-  If ($result->num_rows>0){
-While ($row=$result->fetch_assoc()){
-
-  
-
-$userid=$row["userid"];
-$phone= $row["phone"];
-$uname= $row["uname"];
-$password= $row["password"];
-$tokid='a'.$phone.$password;
-$tokid2='a'.$uname.$password;	
-If($toid==$tokid or $toid==$tokid2){
-    $f=$userid;
-
-	
-echo "<script type='text/javascript'>alert('Logged in successfully');</script>";
+  echo "<script type='text/javascript'>alert('Logging failed try again');</script>";
+  header("Location: signin.php");
 
 }
-
-}}
 
   }
 
@@ -78,11 +47,11 @@ if(isset($_POST['signup'])) {
    $lname=$_POST['lname'];
    $fulname=$fname." ". $lname;
     
-   echo $pas=$_POST['pass'];
+   $pas=$_POST['pass'];
     
    $pockid='pocket'.rand();
    $userid='user'.rand();
-   $tokenid= 'a'.$email.$pass;
+   $tokenid= 'a'.$email.$pas;
     $date= date("Y-m-d h:i:sa");
    
     $upline=$_POST['upline'];;
@@ -91,7 +60,9 @@ if(isset($_POST['signup'])) {
     
 $in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$fulname', '$email', '$pas', '$upline', '$downline', '0', '0')";
 
-if ($conn->query($in) === TRUE) { echo'true';}else{echo $conn->error;}
+if ($conn->query($in) === TRUE) { echo'true';
+  header("Location: signup.php?id=".$upline);
+}else{echo $conn->error;}
 
 }
  
