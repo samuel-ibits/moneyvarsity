@@ -1,7 +1,14 @@
 <php 
-echo $_GET['tknopqii'];
+$token=$_GET['tknopqii'];
 
-?>
+$selr="SELECT * FROM accounts WHERE id='".$token."'";
+$result= $conn->query($selr);
+If ($result->num_rows>0){  
+While ($row=$result->fetch_assoc()){
+	$uplink=$row["uplink"];
+	$downlink=$row["downlink"];
+
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   
@@ -3439,7 +3446,7 @@ echo $_GET['tknopqii'];
 
               <!-- Input Group -->
               <div class="input-group">
-                <input id="referralCode" type="text" class="form-control" readonly value="https://htmlstream.com/wer9n8x">
+                <input id="referralCode" type="text" class="form-control" readonly value="https://moneyvarsity.biz/dashboard/main/welcome.php?id=<?php echo $downlink; ?>">
                 <div class="input-group-append">
                   <a class="js-clipboard btn btn-white" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard"
                      data-hs-clipboard-options='{
