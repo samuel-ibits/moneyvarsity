@@ -1,12 +1,20 @@
 <?php 
+ 
+ $DB_NAME='moneyvar_users';
+ $DB_USER='moneyvar_user';
+ $DB_PASSWORD='P@$$w0rd123';
+ $DB_HOST='localhost:3306';
+ $conn= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME");
+ 
+
 $token=$_GET['tknopqii'];
 
 $selr="SELECT * FROM accounts WHERE token='".$token."'";
 $result= $conn->query($selr);
 If ($result->num_rows>0){  
 While ($row=$result->fetch_assoc()){
-	$uplink=$row["uplink"];
-	$downlink=$row["downlink"];
+	$upline=$row["upline"];
+	$downline=$row["downline"];
   $amount=$row["revenue"];
 
 
@@ -3595,12 +3603,26 @@ $numberofreferals=$result->num_rows;
                 <tr>
                   <th>Referrers</th>
                   <th>Referred ID</th>
-                  <th>URL</th>
-                  <th>Visits</th>
+                  <th>Total Sublets</th>
                   <th>Total earned</th>
                 </tr>
               </thead>
+<?php
+$selr="SELECT * FROM accounts WHERE upline='".$downline."'";
+$result= $conn->query($selr);
+If ($result->num_rows>0){  
+While ($row=$result->fetch_assoc()){
 
+$refdownline=$row["downline"];
+$selrr="SELECT * FROM accounts WHERE upline='".$downline."'";
+$resultt= $conn->query($selrr);
+If ($resultt->num_rows>0){  
+While ($roww=$resultt->fetch_assoc()){
+
+  $numberofsublets=$resultt->num_rows;
+}}
+
+echo'
               <tbody>
                 <tr>
                   <td>
@@ -3609,17 +3631,20 @@ $numberofreferals=$result->num_rows;
                         <img class="avatar-img" src="assets/img/160x160/img10.jpg" alt="Image Description">
                       </div>
                       <div class="ml-3">
-                        <span class="d-block h5 text-hover-primary mb-0">Amanda Harvey <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
-                        <span class="d-block font-size-sm text-body">amanda@example.com</span>
+                        <span class="d-block h5 text-hover-primary mb-0">'.$row["fulname"].' <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+                        <span class="d-block font-size-sm text-body">'.$row["email"].'</span>
                       </div>
                     </a>
                   </td>
-                  <td>24125</td>
-                  <td>https://htmlstream.com/wer9n8x</td>
-                  <td>556</td>
-                  <td>$160.00</td>
+                  <td>'.$row["downline"].'</td>
+                  
+                  <td>'.$numberofsublets.'</td>
+                  <td>N'.$row["revenue'].'</td>
                 </tr>
+';
 
+}}
+?>
                 <tr>
                   <td>
                     <a class="d-flex align-items-center" href="user-profile.html">
