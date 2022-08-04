@@ -91,7 +91,7 @@ if(isset($_POST['signup'])) {
     $downline=rand(10000, 99999);
 
     
-$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$email', '$pass', '$upline', '$downline', '0', '0')";
+$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$fulname', '$email', '$pass', '$upline', '$downline', '0', '0')";
 
 if ($conn->query($in) === TRUE) { echo'true';}else{echo $conn->error;}
 
