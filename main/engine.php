@@ -8,7 +8,7 @@ $DB_NAME='moneyvar_users';
 
 if(isset($_POST['login'])) { 
     $u=$_POST['email'];
-$p=$_POST['password'];
+$p=$_POST['pass'];
 
 
 $toid='a'.$u.$p;
@@ -21,6 +21,7 @@ While ($row=$result->fetch_assoc()){
 	$token=$row["token"];
 	
   echo "<script type='text/javascript'>alert('Logged in successfully');</script>";
+  echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/referals.php?tknopqii='.$token.'");</script>';
 
   header("Location: referals.php?tknopqii=".$token);
 
