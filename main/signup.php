@@ -74,7 +74,7 @@
                         <input type="text" class="form-control form-control-lg" name="fname" id="fullNameSrEmail" placeholder="Mark" aria-label="Mark" required data-msg="Please enter your first name.">
                       </div>
                     </div>
-          <input type="text"  name="upline" value="<?php $_GET['id']; ?>" style="display:none;" />
+          <input type="text"  name="upline" value="<?php $_GET['id']; ?>"  />
                     
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
@@ -97,7 +97,7 @@
                     <label class="input-label" for="signupSrPassword">Password</label>
 
                     <div class="input-group input-group-merge">
-                      <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required
+                      <input type="password" class="js-toggle-password form-control form-control-lg" name="pass" id="signupSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required
                              data-msg="Your password is invalid. Please try again."
                              data-hs-toggle-password-options='{
                                "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],
