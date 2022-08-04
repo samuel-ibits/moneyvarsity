@@ -7,7 +7,12 @@ If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
 	$uplink=$row["uplink"];
 	$downlink=$row["downlink"];
+  $amount=$row["revenue"];
 
+
+$numberofreferals=$result->num_rows;
+
+}}
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -3475,7 +3480,7 @@ While ($row=$result->fetch_assoc()){
             <div class="text-center">
               <img class="avatar avatar-xl avatar-4by3 mb-4" src="assets/svg/illustrations/click.svg" alt="Image Description">
               <small class="text-cap">Number of referrals</small>
-              <span class="d-block display-4 text-dark mb-2">150</span>
+              <span class="d-block display-4 text-dark mb-2"><?php echo $numberofreferals; ?></span>
 
               <div class="row">
                 <div class="col text-right">
@@ -3504,7 +3509,7 @@ While ($row=$result->fetch_assoc()){
             <div class="text-center">
               <img class="avatar avatar-xl avatar-4by3 mb-4" src="assets/svg/illustrations/presenting.svg" alt="Image Description">
               <small class="text-cap">Amount earned</small>
-              <span class="d-block display-4 text-dark mb-2">$7,253.00</span>
+              <span class="d-block display-4 text-dark mb-2">N<?php echo $amount; ?></span>
 
               <div class="row">
                 <div class="col text-right">
@@ -4100,7 +4105,7 @@ While ($row=$result->fetch_assoc()){
         <div class="footer">
           <div class="row justify-content-between align-items-center">
             <div class="col">
-              <p class="font-size-sm mb-0">&copy; Front. <span class="d-none d-sm-inline-block">2020 Htmlstream.</span></p>
+              <p class="font-size-sm mb-0">&copy; Moneyvarsity. <span class="d-none d-sm-inline-block">2022  built by Syberspace.</span></p>
             </div>
             <div class="col-auto">
               <div class="d-flex justify-content-end">
