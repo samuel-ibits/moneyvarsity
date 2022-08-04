@@ -60,12 +60,19 @@ if(isset($_POST['signup'])) {
     
 $in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$fulname', '$email', '$pas', '$upline', '$downline', '0', '0')";
 
-if ($conn->query($in) === TRUE) { echo'true';
-  header("Location: signup.php?id=".$upline);
-}else{echo $conn->error;}
+if ($conn->query($in) === TRUE) {
+  
+
+  echo "<script type='text/javascript'>alert('Account created in successfully');</script>";
+  header("Location: signin.php");
+}else{echo $conn->error;
+
+  echo "<script type='text/javascript'>alert('Account creation failed');</script>";
+
+header("Location: signup.php?id=".$upline);
 
 }
  
-   
+}
 
 ?>
