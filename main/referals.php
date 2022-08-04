@@ -3639,7 +3639,7 @@ echo'
                   <td>'.$row["downline"].'</td>
                   
                   <td>'.$numberofsublets.'</td>
-                  <td>N'.$row["revenue'].'</td>
+                  <td>N'.$row["revenue"].'</td>
                 </tr>
 ';
 
