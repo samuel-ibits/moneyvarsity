@@ -64,15 +64,16 @@ if ($conn->query($in) === TRUE) {
   
 
   echo "<script type='text/javascript'>alert('Account created in successfully');</script>";
-  header("Location: https://www.signin.php");
+
+  echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/signup.php?id="'.$upline.');</script>';
 }else{echo $conn->error;
 
   echo "<script type='text/javascript'>alert('Account creation failed');</script>";
 
-header("Location:signup.php?id=".$upline);
+ echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/signup.php?id="'.$upline.');</script>';
 
-}
  
+}
 }
 
 ?>
