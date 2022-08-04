@@ -80,7 +80,7 @@ if(isset($_POST['signup'])) {
     
    $pas=$_POST['password'];
    $repass=$_POST['confirmpassword'];
-   if ($pas==$repass AND $err==""){$pass=$_POST['password'];	$err2="";}
+   if ($pas==$repass ){$pass=$_POST['password'];}
     
    $pockid='pocket'.rand();
    $userid='user'.rand();
