@@ -11,7 +11,7 @@ if(isset($_POST['login'])) {
 $p=$_POST['pass'];
 
 
-$toid='a'.$u.$p;
+echo $toid='a'.$u.$p;
  
     
     	$selr="SELECT * FROM accounts WHERE id='".$toid."'";
@@ -26,7 +26,7 @@ While ($row=$result->fetch_assoc()){
 }}else{
     
   echo "<script type='text/javascript'>alert('Logging failed try again');</script>";
-  echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/siginin.php");</script>';
+  echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/signin.php");</script>';
 
 }
 
