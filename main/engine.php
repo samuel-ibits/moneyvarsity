@@ -64,12 +64,12 @@ if ($conn->query($in) === TRUE) {
   
 
   echo "<script type='text/javascript'>alert('Account created in successfully');</script>";
-  header("Location: signin.php");
+  header("Location:signin.php");
 }else{echo $conn->error;
 
   echo "<script type='text/javascript'>alert('Account creation failed');</script>";
 
-header("Location: signup.php?id=".$upline);
+header("Location:signup.php?id=".$upline);
 
 }
  
