@@ -93,7 +93,7 @@ if(isset($_POST['signup'])) {
     
 $in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$email', '$pass', '$upline', '$downline', '0', '0')";
 
-if ($conn->query($in) === TRUE) { echo'true';}
+if ($conn->query($in) === TRUE) { echo'true';}else{echo $conn->error;}
 
 }
  
