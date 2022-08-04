@@ -23,12 +23,10 @@ While ($row=$result->fetch_assoc()){
   echo "<script type='text/javascript'>alert('Logged in successfully');</script>";
   echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/referals.php?tknopqii='.$token.'");</script>';
 
-  header("Location: referals.php?tknopqii=".$token);
-
 }}else{
     
   echo "<script type='text/javascript'>alert('Logging failed try again');</script>";
-  header("Location: signin.php");
+  echo' <script>window.location.replace("https://moneyvarsity.biz/dashboard/main/siginin.php");</script>';
 
 }
 
