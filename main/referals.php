@@ -3613,6 +3613,22 @@ $result= $conn->query($selr);
 If ($result->num_rows>0){  
 While ($row=$result->fetch_assoc()){
 
+  echo'
+  <tbody>
+    <tr>
+      <td>
+        <a class="d-flex align-items-center" href="user-profile.html">
+          <div class="avatar avatar-circle">
+            <img class="avatar-img" src="assets/img/160x160/img10.jpg" alt="Image Description">
+          </div>
+          <div class="ml-3">
+            <span class="d-block h5 text-hover-primary mb-0">'.$row["fulname"].' <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
+            <span class="d-block font-size-sm text-body">'.$row["email"].'</span>
+          </div>
+        </a>
+      </td>
+      <td>'.$row["downline"].'</td>
+';
 $refdownline=$row["downline"];
 $selrr="SELECT * FROM accounts WHERE upline='".$refdownline."'";
 $resultt= $conn->query($selrr);
@@ -3621,29 +3637,15 @@ While ($roww=$resultt->fetch_assoc()){
 
   $numberofsublets=$resultt->num_rows;
 
-
+     echo.'             
+                  <td>'.$numberofsublets.'</td>';
+}}
 echo'
-              <tbody>
-                <tr>
-                  <td>
-                    <a class="d-flex align-items-center" href="user-profile.html">
-                      <div class="avatar avatar-circle">
-                        <img class="avatar-img" src="assets/img/160x160/img10.jpg" alt="Image Description">
-                      </div>
-                      <div class="ml-3">
-                        <span class="d-block h5 text-hover-primary mb-0">'.$row["fulname"].' <i class="tio-verified text-primary" data-toggle="tooltip" data-placement="top" title="Top endorsed"></i></span>
-                        <span class="d-block font-size-sm text-body">'.$row["email"].'</span>
-                      </div>
-                    </a>
-                  </td>
-                  <td>'.$row["downline"].'</td>
-                  
-                  <td>'.$numberofsublets.'</td>
-                  <td>N'.$row["revenue"].'</td>
-                </tr>
+
+<td>N'.$row["revenue"].'</td>
+</tr>
 ';
 
-}}
 }}
 ?>
               </tbody>
