@@ -119,7 +119,7 @@
                     <label class="input-label" for="signupSrConfirmPassword">Confirm password</label>
 
                     <div class="input-group input-group-merge">
-                      <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmPassword" id="signupSrConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required
+                      <input type="password" class="js-toggle-password form-control form-control-lg" name="confirmpassword" id="signupSrConfirmPassword" placeholder="8+ characters required" aria-label="8+ characters required" required
                              data-msg="Password does not match the confirm password."
                              data-hs-toggle-password-options='{
                                "target": [".js-toggle-password-target-1", ".js-toggle-password-target-2"],

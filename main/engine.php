@@ -78,13 +78,13 @@ if(isset($_POST['signup'])) {
    $lname=$_POST['lname'];
    $fulname=$fname." ". $lname;
     
-   $pas=$_POST['password'];
-   $repass=$_POST['confirmpassword'];
+   echo $pas=$_POST['password'];
+   echo $repass=$_POST['confirmpassword'];
    if ($pas==$repass ){$pass=$_POST['password'];}
     
    $pockid='pocket'.rand();
    $userid='user'.rand();
-   $tokenid= 'a'.$phone.$pass;
+   $tokenid= 'a'.$email.$pass;
     $date= date("Y-m-d h:i:sa");
    
     $upline=$_POST['upline'];;
