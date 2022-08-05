@@ -18,7 +18,13 @@ While ($row=$result->fetch_assoc()){
   $amount=$row["revenue"];
 
 
-$numberofreferals=$result->num_rows;
+}}
+$selr="SELECT * FROM accounts WHERE upline='".$downline."'";
+$result= $conn->query($selr);
+If ($result->num_rows>0){  
+While ($row=$result->fetch_assoc()){
+
+  $numberofreferals=$result->num_rows;
 
 }}
   ?>
@@ -3528,7 +3534,7 @@ $numberofreferals=$result->num_rows;
                 </div>
 
                 <div class="col column-divider text-left">
-                  <span class="d-block font-weight-bold text-dark">$582.00</span>
+                  <span class="d-block font-weight-bold text-dark">N0</span>
                   <span class="d-block">last week</span>
                 </div>
               </div>
@@ -3546,7 +3552,7 @@ $numberofreferals=$result->num_rows;
             <div class="text-center">
               <img class="avatar avatar-xl avatar-4by3 mb-4" src="assets/svg/illustrations/hi-five.svg" alt="Image Description">
               <small class="text-cap">Referral completed</small>
-              <span class="d-block display-4 text-dark mb-2">25</span>
+              <span class="d-block display-4 text-dark mb-2">0</span>
 
               <div class="row">
                 <div class="col text-right">
