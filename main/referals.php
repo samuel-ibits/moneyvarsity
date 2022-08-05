@@ -3639,10 +3639,12 @@ While ($roww=$resultt->fetch_assoc()){
 
      echo'             
                   <td>'.$numberofsublets.'</td>';
-}}
+}}else{echo'             
+  <td>No sublets yet</td>';}
+ if($row["revenue"]==0) {$revenue='0';}{ $revenue= $row["revenue"];}
 echo'
 
-<td>N'.$row["revenue"].'</td>
+<td>N'.$revenue.'</td>
 </tr>
 ';
 
