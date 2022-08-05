@@ -3637,7 +3637,7 @@ While ($roww=$resultt->fetch_assoc()){
 
   $numberofsublets=$resultt->num_rows;
 
-     echo.'             
+     echo'             
                   <td>'.$numberofsublets.'</td>';
 }}
 echo'
