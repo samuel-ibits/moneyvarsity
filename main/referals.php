@@ -3465,7 +3465,7 @@ While ($row=$result->fetch_assoc()){
 
               <!-- Input Group -->
               <div class="input-group">
-                <input id="referralCode" type="text" class="form-control" readonly value="https://moneyvarsity.biz/dashboard/main/welcome.php?id=<?php echo $downlink; ?>">
+                <input id="referralCode" type="text" class="form-control" readonly value="https://moneyvarsity.biz/dashboard/main/welcome.php?id=<?php echo $downline; ?>">
                 <div class="input-group-append">
                   <a class="js-clipboard btn btn-white" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard"
                      data-hs-clipboard-options='{
