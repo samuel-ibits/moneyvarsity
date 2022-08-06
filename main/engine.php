@@ -6,6 +6,29 @@ $DB_NAME='moneyvar_users';
  $conn= mysqli_connect("$DB_HOST","$DB_USER","$DB_PASSWORD","$DB_NAME");
  
 
+ 
+$wname=$_REQUEST['name'];
+$wemail=$_REQUEST['email'];
+$wpass=$_REQUEST['pass'];
+if(
+  $wname=$_REQUEST['name']!==""){
+    
+   $pockid='pocket'.rand();
+   $userid='user'.rand();
+   $tokenid= 'a'.$wemail.$wpass;
+    $date= date("Y-m-d h:i:sa");
+   
+    $upline=$_POST['upline'];;
+    $downline=rand(10000, 99999);
+
+    
+$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$wname', '$wemail', '$wpass', '$upline', '$downline', '0', '0')";
+
+if ($conn->query($in) === TRUE) {}
+  
+
+}
+
 if(isset($_POST['login'])) { 
     $u=$_POST['email'];
 $p=$_POST['pass'];
