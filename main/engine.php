@@ -22,7 +22,7 @@ if(
     $downline=rand(10000, 99999);
 
     
-$in = "INSERT INTO accounts VALUES ('$tokenid', '$userid', '$wname', '$wemail', '$wpass', '$upline', '$downline', '0', '0')";
+$in = "INSERT INTO landing VALUES ('$wname', '$wemail', '$wpass', '$date', 'not converted')";
 
 if ($conn->query($in) === TRUE) {}
   
