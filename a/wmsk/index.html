@@ -26,6 +26,7 @@
 	<!--For Plugins external css-->
 	<link rel="stylesheet" href="assets/css/plugins.css" />
 
+
 	<!--Theme custom css -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -36,6 +37,81 @@
 
 
 	<script src="../../cdn.stakecut.com/pixel/pixel.min.js"></script>
+
+	
+
+	<script>
+		function start(){
+			document.getElementById('mvid').style.display='block';
+			document.getElementById('myModal').style.display='none';
+
+			var name =document.getElementById('wname').value;
+
+			var email =document.getElementById('wemail').value;
+			var pass =document.getElementById('wpass').value;
+
+var xhttps= new XMLHttpRequest();
+xhttps.onreadystatechange= function(){
+if(xhttps.readyState == 4 && xhttps.status == 200){
+//  document.getElementById("inspect").innerHTML=xhttps.responseText;
+
+}
+};
+
+xhttps.open("GET", "../../main/engine.php?pass="+pass+"name="+name+"&email="+email, true);
+xhttps.send();
+ 
+		}
+	</script>
+
+
+<button id="myBtn" style="display: none;"> </button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   
+    <form>
+        <label>LET US KNOW WHO YOU ARE</label>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Full Name</label>
+            <input required type="text" id="wname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Fullname">
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input  required type="email" id="wemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter  Email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Phone Number</label>
+          <input required type="text"  id="wpass" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
+        </div>
+       
+        <button type="submit" class="btn btn-primary" onclick="start()">Start Webinar</button>
+      </form>
+  </div>
+
+</div>
+<div id="mvid">
+	<iframe src="https://drive.google.com/file/d/1HgrE9fZrnXPK3deGLoj_gfTTcsJEv4C-/preview" width="640" height="480" allow="autoplay"></iframe>
+	<video autoplay muted loop id="myVideo">
+    <source src="https://tinyurl.com/4hcfsps6" type="video/mp4">
+  </video>
+  
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+    <h1></h1>
+    <p>Webinar</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtnn" onclick="myFunction()" > Pause</button>
+  </div>
+</div>
+
+
+
 	<style type="text/css" id="tcb-style-base-page-34904"
 		onLoad="typeof window.lightspeedOptimizeStylesheet === 'function' && window.lightspeedOptimizeStylesheet()"
 		class="tcb-lightspeed-style">
@@ -327,7 +403,8 @@
 			}
 		}
 	</script>
-	<title>Whatsapp Marketing Starter Kit &#8211; Fortune Nnamdi</title>
+	<html id="home">
+			<title>Money versity</title>
 	<meta name='robots' content='max-image-preview:large' />
 	<link rel='dns-prefetch' href='http://s.w.org/' />
 	<link rel="alternate" type="application/rss+xml" title="Fortune Nnamdi &raquo; Feed"
@@ -2481,8 +2558,9 @@ flexibility(document.documentElement);
 								<p dir="ltr" style="" data-css="tve-u-17fa4728e45"><span
 										style="color: rgb(255, 255, 255);" data-css="tve-u-17fa46aee97">
 										 <strong><span style="font-size: 18px;"
-												data-css="tve-u-17fa4756915"><span style="text-transform: uppercase;"
-													data-css="tve-u-17fa472db5b">Sign up now to grab the strategy</span></span></strong> </span></p>
+												data-css="tve-u-17fa4756915">
+												<label for="myBtn" > <span style="text-transform: uppercase;"
+													data-css="tve-u-17fa472db5b">Sign up now to grab the strategy</span> </label> </span></strong> </span></p>
 							</div>
 						</div>
 					</div>
@@ -2544,8 +2622,8 @@ flexibility(document.documentElement);
 										<p dir="ltr">Instead of telling you, I am going to show you step by step how I was able to cash in over N50,000,000 naira in just 2 years in a <span style="color:red">FREE WEBINAR!!! </span> 
 
 										</p>
-										<p dir="ltr"><strong>Click the Link Below to Sign Up for the FREE WEBINAR</strong></p>
-										
+										<label for="myBtn" > <p dir="ltr"><strong>Click the Link Below to Sign Up for the FREE WEBINAR</strong></p>
+										</label>
 										<p data-css="tve-u-17fa55fba39"><strong>
 											<br>During the session I am going to show you…
 											<br>a.	A simple standard method of operation anyone can use to activate own money machine even if you are a dunce.
@@ -2612,8 +2690,8 @@ flexibility(document.documentElement);
 									
 									</div>
 									<div class="thrv_wrapper thrv_text_element">
-										<p data-css="tve-u-17fa55fba3e" style="text-align: center;"><strong>Click To Sign Up for The FREE Webinar</strong></p>
-									</div>
+										<label for="myBtn" > 	<p data-css="tve-u-17fa55fba3e" style="text-align: center;"><strong>Click To Sign Up for The FREE Webinar</strong></p>
+										</label></div>
 									<div class="thrv_wrapper thrv_text_element">
 										<p dir="ltr">Do you know that..</p>
 										<p dir="ltr">I was like, let me try few other things to see more results</p>
@@ -2630,8 +2708,9 @@ flexibility(document.documentElement);
 													style="font-size: 22px;"> REBUILD YOUR OWN ECONOMY IN 90 DAYS.</span></strong>
 											</p>
 
-										<p dir="ltr"> <strong><span data-css="tve-u-17fa55fba40"
-													style="font-size: 22px;">Click Here To Sign Up For The FREE Webinar</span></strong> </p>
+										<p dir="ltr"> <strong>
+											<label for="myBtn" > <span data-css="tve-u-17fa55fba40"
+													style="font-size: 22px;">Click Here To Sign Up For The FREE Webinar</span></label></strong> </p>
 										
 										<p dir="ltr">Also, made <strong><span style="color: rgb(186, 0, 6);"
 													data-css="tve-u-17fa8a13cbc">NOW ASK YOURSELF </span></strong>
@@ -2649,18 +2728,18 @@ flexibility(document.documentElement);
 									<div class="thrv_wrapper thrv_text_element">
 										<p dir="ltr">This webinar will expose you to simple systems you never knew existed and give you access to connecting to the good life you truly deserve like..
 											</p>
-											<strong><span style="font-size: 22px;"data-css="tve-u-17fa55fba43">
+											<strong><p data-css="tve-u-17fa55fba42" style="font-size: 22px;">
 												<br>●	Travel anywhere in the world in comfort and style.
 													<br>●	Make passive investment that multiply exponentially.
 												<br>	●	Set up inheritance for your children…..or whatever you please because you are the AT THE TOP OF THE FOOD CHAIN..
 												<br>	Now, if you are ready to jump to the front of the line and get going with something that will change the pathway of your life..
-												<br>	Click Here To Watch the Video Now….
+												<br>	<label for="myBtn" > Click Here To Watch the Video Now…. </label>
 													</span></strong>
 									</div>
 
 
 
-
+<br><br><p></p>
 
 
 
@@ -2921,4 +3000,5 @@ flexibility(document.documentElement);
 
 <!-- Mirrored from fortunennamdi.com/wmsk/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 02:31:25 GMT -->
 
+</html>
 </html>
