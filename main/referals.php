@@ -3465,12 +3465,10 @@ While ($row=$result->fetch_assoc()){
 
             <div class="col-sm-6 col-md-5 col-lg-4">
             <div class="media-body">
-                    <span class="card-title h5">Mark Williams</span>
-                    <span class="card-text">mark@example.com</span>
+                    <span class="card-title h5">'.$name.'</span>
+                    <span class="card-text">'.$email.'</span>
                   </div>
-            <small class="text-cap mb-2">Your Profile Name:</small>
-            <small class="text-cap mb-2">Your referral code:</small>
-              <small class="text-cap mb-2">Your referral code:</small>
+             <small class="text-cap mb-2">Your referral code:</small>
 
               <!-- Input Group -->
               <div class="input-group">

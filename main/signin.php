@@ -49,14 +49,14 @@
                   <!-- Form -->
                   <form class="js-validate" action="engine.php" method="post">
 
-                    <!-- <div class="text-center">
-                      <div class="mb-5">
+                    <div class="text-center">
+                      <!-- <div class="mb-5">
                         <h1 class="display-4">Sign in</h1>
                         <p>Don't have an account yet? <a href="signup.php">Sign up here</a></p>
-                      </div>
+                      </div> -->
+LOGIN
 
-
-                    </div> -->
+                    </div>
 
                    
                     <div class="js-form-message form-group">
