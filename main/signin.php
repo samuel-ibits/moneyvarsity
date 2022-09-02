@@ -49,14 +49,14 @@
                   <!-- Form -->
                   <form class="js-validate" action="engine.php" method="post">
 
-                    <div class="text-center">
+                    <!-- <div class="text-center">
                       <div class="mb-5">
                         <h1 class="display-4">Sign in</h1>
                         <p>Don't have an account yet? <a href="signup.php">Sign up here</a></p>
                       </div>
 
 
-                    </div>
+                    </div> -->
 
                    
                     <div class="js-form-message form-group">
@@ -111,7 +111,7 @@
               <!-- End Card -->
 
               <!-- Footer -->
-              <div class="text-center">
+              <!-- <div class="text-center">
                 <small class="text-cap mb-4">Trusted by the world's best teams</small>
 
                 <div class="w-85 mx-auto">
@@ -130,7 +130,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- End Footer -->
             </div>
           </div>

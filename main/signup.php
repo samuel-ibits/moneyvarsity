@@ -150,7 +150,7 @@
             <!-- End Card -->
 
             <!-- Footer -->
-            <div class="text-center">
+            <!-- <div class="text-center">
               <small class="text-cap mb-4">Trusted by the world's best teams</small>
 
               <div class="w-85 mx-auto">
@@ -169,7 +169,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- End Footer -->
           </div>
         </div>

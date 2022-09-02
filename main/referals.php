@@ -16,6 +16,9 @@ While ($row=$result->fetch_assoc()){
 	$upline=$row["upline"];
 	$downline=$row["downline"];
   $amount=$row["revenue"];
+  $email=$row["email"];
+  $name=$row["name"];
+  $amount=$row["revenue"];
 
 
 }}
@@ -3461,11 +3464,17 @@ While ($row=$result->fetch_assoc()){
             </div>
 
             <div class="col-sm-6 col-md-5 col-lg-4">
+            <div class="media-body">
+                    <span class="card-title h5">Mark Williams</span>
+                    <span class="card-text">mark@example.com</span>
+                  </div>
+            <small class="text-cap mb-2">Your Profile Name:</small>
+            <small class="text-cap mb-2">Your referral code:</small>
               <small class="text-cap mb-2">Your referral code:</small>
 
               <!-- Input Group -->
               <div class="input-group">
-                <input id="referralCode" type="text" class="form-control" readonly value="https://moneyvarsity.biz/dashboard/a/wmsk/index.html?id=<?php echo $downline; ?>">
+                <input id="referralCode" type="text" class="form-control" readonly value="https://masterclass.moneyvarsity.biz/dashboard/a/wmsk/index.html?id=<?php echo $downline; ?>">
                 <div class="input-group-append">
                   <a class="js-clipboard btn btn-white" href="javascript:;" data-toggle="tooltip" title="Copy to clipboard"
                      data-hs-clipboard-options='{

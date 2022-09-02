@@ -10,6 +10,7 @@ $DB_NAME='moneyvar_users';
 $wname=$_REQUEST['name'];
 $wemail=$_REQUEST['email'];
 $wpass=$_REQUEST['pass'];
+$ref=$_REQUEST['ref'];
 if(
   $wname=$_REQUEST['name']!==""){
     
@@ -22,7 +23,7 @@ if(
     $downline=rand(10000, 99999);
 
     
-$in = "INSERT INTO landing VALUES ('$wname', '$wemail', '$wpass', '$date', 'not converted')";
+$in = "INSERT INTO landing VALUES ('$wname', '$wemail', '$wpass', '$date', '$ref')";
 
 if ($conn->query($in) === TRUE) {}
   

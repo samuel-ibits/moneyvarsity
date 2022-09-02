@@ -40,8 +40,27 @@
 
 	
 
-	<script>
+	<script>function parseURLParams(url) {
+		var queryStart = url.indexOf("?") + 1,
+			queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+			query = url.slice(queryStart, queryEnd - 1),
+			pairs = query.replace(/\+/g, " ").split("&"),
+			parms = {}, i, n, v, nv;
+	
+		if (query === url || query === "") return;
+	
+		for (i = 0; i < pairs.length; i++) {
+			nv = pairs[i].split("=", 2);
+			n = decodeURIComponent(nv[0]);
+			v = decodeURIComponent(nv[1]);
+	
+			if (!parms.hasOwnProperty(n)) parms[n] = [];
+			parms[n].push(nv.length === 2 ? v : null);
+		}
+		return parms;
+	}
 		function start(){
+
 			document.getElementById('mvid').style.display='block';
 			document.getElementById('myModal').style.display='none';
 
@@ -49,16 +68,20 @@
 
 			var email =document.getElementById('wemail').value;
 			var pass =document.getElementById('wpass').value;
-
+			var url_string = window.location;
+var url = new URL(url_string);
+var ref = url.searchParams.get("id");
+console.log(ref);
+window.scrollTo(0, 0);
 var xhttps= new XMLHttpRequest();
 xhttps.onreadystatechange= function(){
 if(xhttps.readyState == 4 && xhttps.status == 200){
 //  document.getElementById("inspect").innerHTML=xhttps.responseText;
-
+window.scrollTo(0, 0);
 }
 };
 
-xhttps.open("GET", "../../main/engine.php?pass="+pass+"name="+name+"&email="+email, true);
+xhttps.open("GET", "../../main/engine.php?pass="+pass+"name="+name+"&email="+email+"id="+ref, true);
 xhttps.send();
  
 		}
@@ -78,16 +101,16 @@ xhttps.send();
         <label style="background-color: white; color:black; ">FILL THE FORM TO GET ACCESS</label>
         <div class="form-group">
             <label style="background-color: white; color:black; text-align:left;" for="exampleInputEmail1">Full Name</label>
-            <input required type="text" id="wname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Fullname">
+            <input required type="text" name="wname" id="wname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Fullname">
           </div>
         <div class="form-group">
           <label style="background-color: white; color:black; text-align:left;" for="exampleInputEmail1">Email address</label>
-          <input  required type="email" id="wemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter  Email">
+          <input  required type="email" name="wemail" id="wemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter  Email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label style="background-color: white; color:black; text-align:left;" for="exampleInputPassword1">Phone Number</label>
-          <input required type="text"  id="wpass" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
+          <input required type="text" name="wpass" id="wpass" class="form-control" id="exampleInputPassword1" placeholder="Phone Number">
         </div>
        
         <button type="submit" class="btn btn-primary" onclick="start()">Get Access</button>
@@ -96,13 +119,15 @@ xhttps.send();
 
 </div>
 <div id="mvid">
-	<iframe src="https://drive.google.com/file/d/1HgrE9fZrnXPK3deGLoj_gfTTcsJEv4C-/preview" width="640" height="480" allow="autoplay"></iframe>
+	<!-- <iframe src="https://drive.google.com/file/d/1HgrE9fZrnXPK3deGLoj_gfTTcsJEv4C-/preview" width="640" height="480" allow="autoplay"></iframe>
 	<video autoplay muted loop id="myVideo">
     <source src="https://tinyurl.com/4hcfsps6" type="video/mp4">
-  </video>
-  
+  </video> -->
+ 
   <!-- Optional: some overlay text to describe the video -->
   <div class="content">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/YcMsKirGpZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     <h1></h1>
     <p>Webinar</p>
     <!-- Use a button to pause/play the video with JavaScript -->
@@ -2623,7 +2648,7 @@ text-align: center;
 														
 										<p dir="ltr" style="" data-css="tve-u-17fa55fba35">	●	<strong>Cold Calling:</strong> Having to prove myself on phone to a stranger.</p>
 										<p dir="ltr" style="" data-css="tve-u-17fa55fba35">●	<strong>Without Depending On Referrals:</strong> Waiting for referrals is like waiting for money to grow on trees. Don't count on it.</p>
-										<p dir="ltr" style="" data-css="tve-u-17fa55fba35">●	<strong>Without Having To Knock On The Doors:</strong> Doors Of Banks and Loans Houses Looking for loans designed to keep you living in continual bondage. By the way, a bank loan is a sure way to kick-start a heart attack.</p>
+										<p dir="ltr" style="" data-css="tve-u-17fa55fba35">●	<strong>Without Having To Knock On The Doors Of Banks and Loans Houses:</strong> Looking for loans designed to keep you living in continual bondage. By the way, a bank loan is a sure way to kick-start a heart attack.</p>
 										<p dir="ltr" style="" data-css="tve-u-17fa55fba35">	But Here's something you need to know
 												before we proceed</p>
 										<p dir="ltr">So what the heck did I do?......</p>
