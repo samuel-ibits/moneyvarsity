@@ -55,14 +55,7 @@
                         <p>Don't have an account yet? <a href="signup.php">Sign up here</a></p>
                       </div>
 
-                      <a class="btn btn-lg btn-block btn-white mb-4" href="#">
-                        <span class="d-flex justify-content-center align-items-center">
-                          <img class="avatar avatar-xss mr-2" src="assets/svg/brands/google.svg" alt="Image Description">
-                          Sign in with Google
-                        </span>
-                      </a>
 
-                      <span class="divider text-muted mb-4">OR</span>
                     </div>
 
                    
