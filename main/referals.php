@@ -8,6 +8,7 @@
  
 
 $token=$_GET['tknopqii'];
+if ($token==""){window.location.replace("https://masterclass.moneyvarsity.biz/dashboard/main/signin.php");}
 
 $selr="SELECT * FROM accounts WHERE token='".$token."'";
 $result= $conn->query($selr);
@@ -3465,8 +3466,8 @@ While ($row=$result->fetch_assoc()){
 
             <div class="col-sm-6 col-md-5 col-lg-4">
             <div class="media-body">
-                    <span class="card-title h5">'.$name.'</span>
-                    <span class="card-text">'.$email.'</span>
+                    <span class="card-title h5"><?php echo $name; ?></span>
+                    <span class="card-text"><?php echo $email; ?></span>
                   </div>
              <small class="text-cap mb-2">Your referral code:</small>
 
