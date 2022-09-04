@@ -17,8 +17,8 @@ While ($row=$result->fetch_assoc()){
 	$upline=$row["upline"];
 	$downline=$row["downline"];
   $amount=$row["revenue"];
-  $email=$row["email"];
-  $name=$row["name"];
+  $aemail=$row["email"];
+  $aname=$row["name"];
   $amount=$row["revenue"];
 
 
@@ -3466,8 +3466,8 @@ While ($row=$result->fetch_assoc()){
 
             <div class="col-sm-6 col-md-5 col-lg-4">
             <div class="media-body">
-                    <span class="card-title h5"><?php echo $name; ?></span>
-                    <span class="card-text"><?php echo $email; ?></span>
+                    <span class="card-title h5"><?php echo $aname; ?></span>
+                    <span class="card-text"><?php echo $aemail; ?></span>
                   </div>
              <small class="text-cap mb-2">Your referral code:</small>
 
