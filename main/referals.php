@@ -18,7 +18,7 @@ While ($row=$result->fetch_assoc()){
 	$downline=$row["downline"];
   $amount=$row["revenue"];
   $aemail=$row["email"];
-  $aname=$row["name"];
+  $aname=$row["fulname"];
   $amount=$row["revenue"];
 
 
