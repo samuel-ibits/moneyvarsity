@@ -8,7 +8,7 @@
  
 
 $token=$_GET['tknopqii'];
-if ($token==""){<script>window.location.replace("https://masterclass.moneyvarsity.biz/dashboard/main/signin.php");</script>}
+if ($token==""){echo'<script>window.location.replace("https://masterclass.moneyvarsity.biz/dashboard/main/signin.php");</script>';}
 
 $selr="SELECT * FROM accounts WHERE token='".$token."'";
 $result= $conn->query($selr);
@@ -22,7 +22,7 @@ While ($row=$result->fetch_assoc()){
   $amount=$row["revenue"];
 
 
-}}else{<script>window.location.replace("https://masterclass.moneyvarsity.biz/dashboard/main/signin.php");</script>}
+}}else{echo'<script>window.location.replace("https://masterclass.moneyvarsity.biz/dashboard/main/signin.php");</script>';}
 
 $selr="SELECT * FROM accounts WHERE upline='".$downline."'";
 $result= $conn->query($selr);
