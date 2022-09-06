@@ -16,9 +16,9 @@ If ($result->num_rows>0){
 While ($row=$result->fetch_assoc()){
 	$upline=$row["upline"];
 	$downline=$row["downline"];
-  $amount=$row["revenue"];
-  $aemail=$row["email"]."jj";
-  $aname=$row["fulname"];
+  $amount=$row["revenue"]; 
+ echo $aemail=$row["email"];
+  echo $aname=$row["fulname"];
   $amount=$row["revenue"];
 
 
@@ -3615,7 +3615,9 @@ While ($row=$result->fetch_assoc()){
                    }'>
               <thead class="thead-light">
                 <tr>
+                
                   <th>Referrers</th>
+                  <th>Phone</th>
                   <th>Referred ID</th>
                   <th>Total Sublets</th>
                   <th>Total earned</th>
@@ -3641,6 +3643,7 @@ While ($row=$result->fetch_assoc()){
           </div>
         </a>
       </td>
+      <td>'.$row["phone"].'</td>
       <td>'.$row["downline"].'</td>
 ';
 $refdownline=$row["downline"];
