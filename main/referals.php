@@ -3595,7 +3595,7 @@ While ($row=$result->fetch_assoc()){
         <div class="card">
           <!-- Header -->
           <div class="card-header">
-            <h4 class="card-header-title">Referral users</h4>
+            <h4 class="card-header-title">Referral user</h4>
           </div>
           <!-- End Header -->
 
